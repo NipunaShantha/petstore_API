@@ -23,11 +23,7 @@ public class PetResourceTest {
 	@Test
     public void testPetAddEndpoint() {
         given()
-          .when().post("/v1/pets/add",{
-        	    "petName": "Kitty",
-        	    "petType": "Cat",
-        	    "petAge": 5
-        	})
+          .when().post("/v1/pets/add")
           .then()
           .statusCode(200);
     }
