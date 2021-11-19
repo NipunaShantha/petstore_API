@@ -142,6 +142,7 @@ public class PetResource {
 	@APIResponses(value = {
 			@APIResponse(responseCode = "200", description = "All Pets Types", content = @Content(mediaType = MediaType.APPLICATION_JSON, schema = @Schema(ref = "Pet")))})
 	@GET
+	@Path("/type")
 	public Response getAllPetTypes() {
 		List<String> allPetTypes = new ArrayList<String>();
 		if(petTypes.size() > 0){
